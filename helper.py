@@ -1,7 +1,7 @@
 import requests
 
 HEADERS = {
-       'Authorization': 'Bearer EAAxB2B7BqFIBAC6xDPerRSzShByVEo56l4ZAvd3ClhZA5aSBqdJ43S3imOvrXvlD3wlVeH7vnt6enPR3kZB0xZAE8XZCUu7Tbyo2mJrXr3eF8xZCyK2qwCMs1xQtGDBlBM4apPDDz9vOFmjGkl9SvZAVThZCrJUYQgttZBRB4cC0JWQZC8CLoa5kXZC7ciyuftJHk4EBu9OzJNj1gZDZD',}
+       'Authorization': 'Bearer EAAxB2B7BqFIBAOgaBYbzuCwcgu6S6DlM0WOwPfhewmXjkG4rg8gBvBcoscrLVP079JKBn22E6J38xclFFOcAp4P1MlqTPFlbopI0Kwex0WjIkjUrjZABCCQztljVQXAqi4y04AooanYIb0Wzt01Jgomuus1tYdXvxxVbVrxf021PQZCVgq',}
 
 def send_msg(msg, mob):
     json_data = {
@@ -66,18 +66,18 @@ def processRequest(req):
         fileType = req['entry'][0]['changes'][0]['value']['messages'][0]['type']
         
         if fileType == 'audio':
-            send_msg('ª{•̃̾_•̃̾}ª Bot Working On It.', mobile)
+            send_msg('🤖s Working On It.', mobile)
             id_ = req['entry'][0]['changes'][0]['value']['messages'][0]['audio']['id']
             status, audio = getAudio(id_)
             
             if status:
                 verify, msg = getText()
                 if not verify:
-                    msg = 'ª{•̃̾_•̃̾}ª Error! Bot Couldnot Process Audio.'
+                    msg = '🤖 Error! Bot Couldnot Process Audio.'
             else:
-                msg = 'ª{•̃̾_•̃̾}ª Bot Couldnot Process Audio.'            
+                msg = '🤖 Couldnot Process Audio.'            
         else:
-            msg = 'ª{•̃̾_•̃̾}ª Bot only Processes Audio File! Please Send Audio File.'
+            msg = '🤖 only Processes Audio File! Please Send Audio File.'
         
         send_msg(msg, mobile)
         print('MESSAGE_SENT---->', mobile, msg)
