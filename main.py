@@ -1,21 +1,30 @@
-from flask import Flask, jsonify, request
-import os
-
+from flask import Flask, request
+import requests
+from helper import *
+ 
 app = Flask(__name__)
-
-
+ 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
-    
-    
+    return "Hello"
+
+ 
 @app.route('/receive_msg', methods=['POST','GET'])
 def webhook():
-    if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token")== "Saksham":
-            return "Verification token missmatch", 403
-        return request.args['hub.challenge'], 200
-    return "Hello world", 200
+    res = request.get_json()
+    print('Input---------', res)
+    
+    msg = 'Error in Processing!'
+    
+    try:
+        print('Entering Try Block')
+        status = processRequest(res)            
+    except:
+        print('Entering Except Block')
+        pass
+    
+    print('--------------------------------------------------------------------------')
+    return '200 OK HTTPS.'
 
 
 if __name__ == '__main__':
