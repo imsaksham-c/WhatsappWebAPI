@@ -12,7 +12,7 @@ def send_msg(msg, mob):
            "body": msg
        }
     }
-    response = requests.post('https://graph.facebook.com/v15.0/110424988621656/messages', headers=HEADERS, json=json_data)
+    response = requests.post('https://graph.facebook.com/v15.0/112149938479033/messages', headers=HEADERS, json=json_data)
     #print('MESSAGE_SENT-->',response.text)
        
 def getAudio(id_):
