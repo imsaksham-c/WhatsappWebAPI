@@ -1,7 +1,8 @@
 import requests
 
 HEADERS = {
-       'Authorization': 'Bearer EAAqtPYZCt4N0BACOugY6JBkaK7WfVSGWkQL3xQgg2FpWZAjPao0WbTj4uhp11rNjpyUZAPqCZCl8E0MGYvhZBYvvHsvMdZCKntSWQk7QD3DClpRGKP65Jpq1fEeuBiSFnkFZBv6AgiQWournYqYr2e5Ug8RYsmFm8XSEPqsiKGJgMTKAza96qDWasOum4yZAEcdoXZCTYQN6gQQZDZD'
+       'Authorization': 'Bearer EAAqtPYZCt4N0BACOugY6JBkaK7WfVSGWkQL3xQgg2FpWZAjPao0WbTj4uhp11rNjpyUZAPqCZCl8E0MGYvhZBYvvHsvMdZCKntSWQk7QD3DClpRGKP65Jpq1fEeuBiSFnkFZBv6AgiQWournYqYr2e5Ug8RYsmFm8XSEPqsiKGJgMTKAza96qDWasOum4yZAEcdoXZCTYQN6gQQZDZD',}
+
 def send_msg(msg, mob):
     json_data = {
        'messaging_product': 'whatsapp',
