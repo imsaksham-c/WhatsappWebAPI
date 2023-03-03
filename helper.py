@@ -1,7 +1,7 @@
 import requests
 
 HEADERS = {
-       'Authorization': 'Bearer EAAqtPYZCt4N0BACOugY6JBkaK7WfVSGWkQL3xQgg2FpWZAjPao0WbTj4uhp11rNjpyUZAPqCZCl8E0MGYvhZBYvvHsvMdZCKntSWQk7QD3DClpRGKP65Jpq1fEeuBiSFnkFZBv6AgiQWournYqYr2e5Ug8RYsmFm8XSEPqsiKGJgMTKAza96qDWasOum4yZAEcdoXZCTYQN6gQQZDZD',}
+       'Authorization': 'Bearer EAAqtPYZCt4N0BANcNFFsplTyIldYGVpsLU60uPik0KNVYPj9FqbjAyZAT4otEfBWfZAn2aYutSEKcGvWRk1hbRpbMJu3HMXOUcOYPEwZAyXBaeURqOnVoxHMHnYUYIIR51n4zuD8DOnznqhkaC3EAjZB5f1h1vvaUZCgy9aC78XmOcZAmbkFHIZB',}
 
 def send_msg(msg, mob):
     json_data = {
